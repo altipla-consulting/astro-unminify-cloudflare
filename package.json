@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
+  "keywords": ["astro-integration", "cloudflare-pages"],
   "scripts": {
     "build": "pkgroll",
     "lint": "tsc --noEmit && eslint --ext .ts src",
