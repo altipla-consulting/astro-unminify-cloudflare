@@ -1,0 +1,38 @@
+{
+  "name": "astro-unminify-cloudflare",
+  "version": "0.0.0",
+  "description": "Astro integration to unminify the generated Cloudflare worker.",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "pkgroll",
+    "lint": "tsc --noEmit && eslint --ext .ts src",
+    "fix": "eslint --fix --ext .ts src",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altipla-consulting/astro-unminify-cloudflare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/altipla-consulting/astro-unminify-cloudflare/issues"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/altipla-consulting/astro-unminify-cloudflare#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Altipla Consulting",
+  "license": "MIT",
+  "devDependencies": {
+    "@altipla/eslint-config-ts": "^0.9.0",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.10.4",
+    "pkgroll": "^2.0.1",
+    "tsx": "^4.6.2"
+  }
+}
