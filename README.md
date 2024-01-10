@@ -15,3 +15,31 @@ This integration disables minification only for the server-side, preserving all 
 ```shell
 npm astro add astro-unminify-cloudflare
 ```
+
+## Example Astro config
+
+Remember that you need to enable the Cloudflare adapter and build with `server` or `hybrid` mode to have a SSR worker to unminify. This is an example configuration file for reference only:
+
+```ts
+import { defineConfig } from 'astro/config'
+import vue from '@astrojs/vue'
+import tailwind from '@astrojs/tailwind'
+import unminifyCloudflare from "astro-unminify-cloudflare"
+import cloudflare from '@astrojs/cloudflare'
+
+export default defineConfig({
+  output: 'server',
+  adapter: cloudflare({
+    imageService: 'passthrough',
+  }),
+  trailingSlash: 'never',
+  build: {
+    format: 'file',
+  },
+  integrations: [
+    vue(),
+    tailwind(),
+    unminifyCloudflare(),
+  ],
+})
+```
