@@ -24,7 +24,7 @@ Remember that you need to enable the Cloudflare adapter and build with `server` 
 import { defineConfig } from 'astro/config'
 import vue from '@astrojs/vue'
 import tailwind from '@astrojs/tailwind'
-import unminifyCloudflare from "astro-unminify-cloudflare"
+import unminifyCloudflare from 'astro-unminify-cloudflare'
 import cloudflare from '@astrojs/cloudflare'
 
 export default defineConfig({
